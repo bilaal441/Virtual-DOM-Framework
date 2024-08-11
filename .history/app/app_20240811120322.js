@@ -355,8 +355,7 @@ function TodoApp(store) {
           "Clear Completed"
         )
       )
-    ),
-    footer()
+    )
   );
 }
 

@@ -196,11 +196,11 @@ function TodoApp(store) {
           placeholder: "What needs to be done?",
           autofocus: true,
           value: store.state.newTodo,
-
+  
           oninput: (e) => {
             store.update({newTodo: e.target.value});
           },
-
+  
           onkeydown: (e) => {
             if (e.key === "Enter" && store.state.newTodo.trim() !== "") {
               const newTodos = [
@@ -212,7 +212,7 @@ function TodoApp(store) {
                 },
                 ...store.state.todos,
               ];
-
+  
               store.update({
                 todos: newTodos,
                 newTodo: "",
@@ -254,7 +254,7 @@ function TodoApp(store) {
                 }`,
                 ondblclick: ondblclickHandler,
                 "data-id": todo.id,
-
+  
                 onkeydown: editTodoKeydown,
               },
               createElement(
@@ -355,9 +355,9 @@ function TodoApp(store) {
           "Clear Completed"
         )
       )
-    ),
-    footer()
-  );
+    )
+
+  )
 }
 
 const footer = () => {
